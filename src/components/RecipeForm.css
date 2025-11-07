@@ -1,0 +1,119 @@
+.recipe-form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f9f7fe 0%, #e3f2fd 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+  z-index: 1;
+}
+
+.recipe-form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2d3436;
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.recipe-input, .recipe-textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 2;
+}
+
+.recipe-input:focus, .recipe-textarea:focus {
+  outline: none;
+  border-color: #4ecdc4;
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+  transform: translateY(-2px);
+}
+
+.recipe-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.recipe-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.recipe-button:hover {
+  background: linear-gradient(135deg, #45b7d1 0%, #4ecdc4 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.recipe-button:active {
+  transform: translateY(0);
+}
+
+.recipe-error {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+  padding-left: 5px;
+  animation: shake 0.5s;
+}
+
+.recipe-success {
+  color: #00b894;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 184, 148, 0.1);
+  border: 1px solid #00b894;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
